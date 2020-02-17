@@ -70,7 +70,6 @@ public class Employe {
     public String toString() {
         nbreInstances++;
         if(nbreInstances>3) {
-            System.out.println(nbreInstances+"nombre dinstances");
             String employeInformations = "Taux d'occupation : " + this.mensualOccupationTime +
                     "%. Salaire annuel : " + this.yearIncomeCalcul() + " francs. Prime :" + this.askForPrime;
             return employeInformations;

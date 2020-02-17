@@ -6,14 +6,13 @@ public class Employe {
 
     protected String nom;
     protected double mensualIncome;
-    protected double mensualOccupationTime;
+    protected double mensualOccupationTime=100;
     protected double askForPrime;
 
     //creation du constructeur Employes
     public Employe(String nom, double mensualIncome, double mensualOccupationTime) {
         this.nom = nom;
         this.mensualIncome = mensualIncome;
-
         //creation des conditions pour <10 et >100
         if (mensualOccupationTime > 100) {
             mensualOccupationTime = 100;
@@ -21,11 +20,7 @@ public class Employe {
             mensualOccupationTime = 10;
         }
         this.mensualOccupationTime = mensualOccupationTime;
-    }
-
-    //affichage nouvel employé de la classe mere
-    protected void newEmployesType() {
-        System.out.print("Nous avons un nouvel employé : ");
+        System.out.println("Nous avons un nouvel employé: "+this.nom+ ". C'est un "+ this.getClass());
     }
 
 
@@ -37,6 +32,11 @@ public class Employe {
         //est censé formater yearIncome a deux chiffres apres la virgule...ne marche pas
         return yearIncome;
     }
+    protected double yearIncomeCalculWithPrime() {
+        double yearIncome = this.mensualIncome * 12 * this.mensualOccupationTime + this.askForPrime;
+        return yearIncome;
+    }
+
 
     //methode demandant une prime
     void demandePrime() {
@@ -44,18 +44,21 @@ public class Employe {
         System.out.println("Montant de la prime demandée par " + this.nom + " ?");
         Scanner keyboard = new Scanner(System.in);
         this.askForPrime = keyboard.nextDouble();
+        keyboard.nextLine();
         int i = 1;
         while (this.askForPrime>maxAskForPrime && i < 5){
             System.out.println("Trop cher");
             i++;
             System.out.println("Montant de la prime demandée par " + this.nom +" ?");
             this.askForPrime = keyboard.nextDouble();
+            keyboard.nextLine();
 
             if(i==5 && this.askForPrime > maxAskForPrime) {
                 this.askForPrime = 0;
             }
         }
-        System.out.println("prime ="+this.askForPrime);
+        yearIncomeCalculWithPrime();
+        System.out.println(yearIncomeCalculWithPrime()+"test prime+salaire devrai etre 39941.6 avec prime 200");
     }
 
 

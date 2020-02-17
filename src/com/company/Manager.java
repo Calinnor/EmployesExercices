@@ -10,11 +10,6 @@ public class Manager extends Employe{
         this.numberOfNewCustomersBringing = numberOfNewCustomersBringing;
     }
 
-    public void newEmployesType() {
-        super.newEmployesType();
-        System.out.println(this.nom + " ,c'est un manager.");
-    }
-
     public static final double FACTEUR_GAIN_CLIENT = 500;
 
     public static final double FACTEUR_GAIN_VOYAGE = 100;
@@ -23,6 +18,11 @@ public class Manager extends Employe{
         double managerYearIncome = super.yearIncomeCalcul() / 100 + FACTEUR_GAIN_CLIENT * this.numberOfNewCustomersBringing +
                 FACTEUR_GAIN_VOYAGE * this.travelDays;
         return managerYearIncome;
+    }
+
+    public double yearIncomeCalculWithPrime(){
+        double managerYearIncomeWithPrime = super.yearIncomeCalculWithPrime()/100 + FACTEUR_GAIN_CLIENT * this.numberOfNewCustomersBringing+this.askForPrime;
+        return managerYearIncomeWithPrime;
     }
 
     public String toString() {

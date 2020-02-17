@@ -9,16 +9,16 @@ public class Programmeur extends Employe{
         this.completedProjects = completedProjects;
     }
 
-    public void newEmployesType(){
-        super.newEmployesType();
-        System.out.println(this.nom+" ,c'est un programmeur.");
-    }
-
     public static final int FACTEUR_GAINS_PROJETS=200;
 
     public double yearIncomeCalcul() {
         double programmeurYearIncome = super.yearIncomeCalcul()/100 + FACTEUR_GAINS_PROJETS * this.completedProjects;
         return programmeurYearIncome;
+    }
+
+    public double yearIncomeCalculWithPrime(){
+        double programmeurYearIncomeWithPrime = super.yearIncomeCalculWithPrime()/100 + FACTEUR_GAINS_PROJETS * this.completedProjects+this.askForPrime;
+        return programmeurYearIncomeWithPrime;
     }
 
     public String toString(){

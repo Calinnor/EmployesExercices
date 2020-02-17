@@ -13,11 +13,6 @@ public class Testeur extends Employe{
         this.correctedWarnings = correctedWarnings;
     }
 
-    //affichage type testeur
-    public void newEmployeType(){
-        super.newEmployesType();
-        System.out.println(this.nom+" ,c'est un testeur.");
-    }
 
     public static final double FACTEUR_GAINS_ERREURS=10;
 
@@ -26,6 +21,12 @@ public class Testeur extends Employe{
         double testeurYearIncome = super.yearIncomeCalcul()/100 + FACTEUR_GAINS_ERREURS * this.correctedWarnings;
         return testeurYearIncome;
     }
+
+    public double yearIncomeCalculWithPrime(){
+        double testeurYearIncomeWithPrime = super.yearIncomeCalculWithPrime()/100 + FACTEUR_GAINS_ERREURS * this.correctedWarnings+this.askForPrime;
+        return testeurYearIncomeWithPrime;
+    }
+
 
     public String toString(){
         String testeurInformations=this.nom+"\n"+ super.toString()+"\nA corrigé "+this.correctedWarnings+ " erreurs.\n";

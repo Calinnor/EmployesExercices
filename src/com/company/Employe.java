@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Employe {
     public static int nbreInstances = 0;
+    public static int nbreInstancesEmploye=0;
 
 
     protected String nom;
@@ -22,6 +23,7 @@ public class Employe {
             mensualOccupationTime = 10;
         }
         this.mensualOccupationTime = mensualOccupationTime;
+        nbreInstancesEmploye++;
         System.out.println("Nous avons un nouvel employé: "+this.nom+ ". C'est un "+ this.getClass().getSimpleName());
     }
 
@@ -69,7 +71,7 @@ public class Employe {
 
     public String toString() {
         nbreInstances++;
-        if(nbreInstances>3) {
+        if(nbreInstances>nbreInstancesEmploye) {
             String employeInformations = "Taux d'occupation : " + this.mensualOccupationTime +
                     "%. Salaire annuel : " + this.yearIncomeCalcul() + " francs. Prime :" + this.askForPrime;
             return employeInformations;

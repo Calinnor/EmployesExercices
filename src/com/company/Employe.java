@@ -7,7 +7,7 @@ public class Employe {
     protected String nom;
     protected double mensualIncome;
     protected double mensualOccupationTime=100;
-    protected double askForPrime;
+    protected double askForPrime=0;
 
     //creation du constructeur Employes
     public Employe(String nom, double mensualIncome, double mensualOccupationTime) {
@@ -27,51 +27,33 @@ public class Employe {
     //fonction de calcul du revenu annuel pour les employés
     protected double yearIncomeCalcul() {
         double yearIncome = this.mensualIncome * 12 * this.mensualOccupationTime ;
-
         //String.format("%.2f", yearIncome);
         //est censé formater yearIncome a deux chiffres apres la virgule...ne marche pas
         return yearIncome;
-    }
 
-    protected double yearIncomeCalculWithPrime() {
-        double yearIncome = this.mensualIncome * 12 * this.mensualOccupationTime + this.askForPrime;
-        return yearIncome;
     }
-
 
     //methode demandant une prime
-    void demandePrime() {
-        double maxAskForPrime = yearIncomeCalcul()*2/100;
+    protected void demandePrime() {
         System.out.println("Montant de la prime demandée par " + this.nom + " ?");
         Scanner keyboard = new Scanner(System.in);
         this.askForPrime = keyboard.nextDouble();
         keyboard.nextLine();
         int i = 1;
-        while (this.askForPrime>maxAskForPrime && i < 5){
+        while (this.askForPrime>(yearIncomeCalcul()*2/100) && i < 5){
             System.out.println("Trop cher");
             i++;
             System.out.println("Montant de la prime demandée par " + this.nom +" ?");
             this.askForPrime = keyboard.nextDouble();
             keyboard.nextLine();
 
-            if(i==5 && this.askForPrime > maxAskForPrime) {
+            if(i==5 && this.askForPrime >(yearIncomeCalcul()*2/100)) {
                 this.askForPrime = 0;
             }
         }
-        double yearIncomeWithPrime = yearIncomeCalcul()+this.askForPrime;
-        System.out.println(yearIncomeWithPrime+"test salaire plus prime");
+        System.out.println("askForPrime ="+askForPrime);
     }
 
-
-
-    //Test partie 2 : Montant de la prime souhaitée par Serge Legrand ?
-    // 10000000 Trop cher! Montant de la prime souhaitée par Serge Legrand ?
-
-
-    //Définissez ensuite dans la classe Employe une méthode void demandePrime() réalisant les traitements suivants :
-    // — demander la saisie (au clavier) d’un montant de prime souhaitée par l’employé (un double);
-    // — redemander ce montant tant que la donnée saisie est trop grande
-    // (l’employé ne peut demander plus de 2% de son salaire annuel)
     // ou que la donnée saisie est non numérique (lancement d’une InputMismatchException par nextDouble()).
 
 
@@ -86,7 +68,7 @@ public class Employe {
 
     public String toString() {
         String employeInformations ="Taux d'occupation : " + this.mensualOccupationTime +
-                "%. Salaire annuel : " + this.yearIncomeCalcul() + " francs. " ;
+                "%. Salaire annuel : " + (this.yearIncomeCalcul()+this.askForPrime )+ " francs. "+"Prime :"+this.askForPrime ;
         return employeInformations;
     }
 }

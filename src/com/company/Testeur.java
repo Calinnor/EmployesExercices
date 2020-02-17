@@ -18,16 +18,9 @@ public class Testeur extends Employe{
 
     //methode de calcul du revenu annuel testeur
     public double yearIncomeCalcul() {
-        double testeurYearIncome = super.yearIncomeCalcul()/100 + FACTEUR_GAINS_ERREURS * this.correctedWarnings;
+        double testeurYearIncome = super.yearIncomeCalcul()/100 + FACTEUR_GAINS_ERREURS * this.correctedWarnings+this.askForPrime;
         return testeurYearIncome;
     }
-
-   /* public double yearIncomeCalculWithPrime(){
-        double testeurYearIncomeWithPrime = super.yearIncomeCalculWithPrime()/100 + FACTEUR_GAINS_ERREURS * this.correctedWarnings+this.askForPrime;
-        //System.out.format("%.2f", testeurYearIncomeWithPrime);
-        return testeurYearIncomeWithPrime;
-    }*/
-
 
     public String toString(){
         String testeurInformations=this.nom+"\n"+ super.toString()+"\nA corrigé "+this.correctedWarnings+ " erreurs.\n";

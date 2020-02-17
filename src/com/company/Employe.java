@@ -67,7 +67,7 @@ public class Employe {
 
     public String toString() {
         String employeInformations ="Taux d'occupation : " + this.mensualOccupationTime +
-                "%. Salaire annuel : " + (this.yearIncomeCalcul()+this.askForPrime )+ " francs. "+"Prime :"+this.askForPrime ;
+                "%. Salaire annuel : " + this.yearIncomeCalcul()+ " francs. Prime :"+this.askForPrime ;
         return employeInformations;
     }
 }

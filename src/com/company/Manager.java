@@ -16,7 +16,7 @@ public class Manager extends Employe{
 
     public double yearIncomeCalcul() {
         double managerYearIncome = super.yearIncomeCalcul() / 100 + FACTEUR_GAIN_CLIENT * this.numberOfNewCustomersBringing +
-                FACTEUR_GAIN_VOYAGE * this.travelDays + this.askForPrime-this.askForPrime;//erreur dans le calcul corrigée par -...
+                FACTEUR_GAIN_VOYAGE * this.travelDays + this.askForPrime;
         return managerYearIncome;
     }
 

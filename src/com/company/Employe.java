@@ -3,6 +3,8 @@ package com.company;
 import java.util.Scanner;
 
 public class Employe {
+    public static int nbreInstances = 0;
+
 
     protected String nom;
     protected double mensualIncome;
@@ -66,9 +68,18 @@ public class Employe {
 
 
     public String toString() {
-        String employeInformations ="Taux d'occupation : " + this.mensualOccupationTime +
-                "%. Salaire annuel : " + this.yearIncomeCalcul()+ " francs. Prime :"+this.askForPrime ;
-        return employeInformations;
+        nbreInstances++;
+        if(nbreInstances>3) {
+            System.out.println(nbreInstances+"nombre dinstances");
+            String employeInformations = "Taux d'occupation : " + this.mensualOccupationTime +
+                    "%. Salaire annuel : " + this.yearIncomeCalcul() + " francs. Prime :" + this.askForPrime;
+            return employeInformations;
+        }
+        else{
+            String employeInformations = "Taux d'occupation : " + this.mensualOccupationTime +
+                    "%. Salaire annuel : " + this.yearIncomeCalcul() + " francs.";
+            return employeInformations;
+        }
     }
 }
 

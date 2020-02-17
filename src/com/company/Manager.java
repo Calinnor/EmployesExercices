@@ -8,6 +8,7 @@ public class Manager extends Employe{
         super(nom, mensualIncome, mensualOccupationTime);
         this.travelDays = travelDays;
         this.numberOfNewCustomersBringing = numberOfNewCustomersBringing;
+
     }
 
     public static final double FACTEUR_GAIN_CLIENT = 500;

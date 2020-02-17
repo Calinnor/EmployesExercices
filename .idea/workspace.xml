@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f36fb019-0b66-4dce-a164-a57ce6b14f9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EmployesExercice/com/company/Employe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EmployesExercice/com/company/Employe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EmployesExercice/com/company/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EmployesExercice/com/company/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EmployesExercice/com/company/Programmeur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EmployesExercice/com/company/Programmeur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EmployesExercice/com/company/Testeur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EmployesExercice/com/company/Testeur.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Employe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Employe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Programmeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Programmeur.java" afterDir="false" />
@@ -91,41 +94,57 @@
       <option name="presentableId" value="Default" />
       <updated>1581847566228</updated>
     </task>
+    <task id="LOCAL-00001" summary="Modification du code sur toString ainsi que sur l'implementation d'un message a la creation d'un objet employé.&#10;Erreur de calcul sur le montant de salaire annuel+prime/&#10;A revoir">
+      <created>1581921086025</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581921086025</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Modification du code sur toString ainsi que sur l'implementation d'un message a la creation d'un objet employé.&#10;Erreur de calcul sur le montant de salaire annuel+prime/&#10;A revoir" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification du code sur toString ainsi que sur l'implementation d'un message a la creation d'un objet employé.&#10;Erreur de calcul sur le montant de salaire annuel+prime/&#10;A revoir" />
   </component>
   <component name="WindowStateProjectService">
     <state x="530" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581887176445">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1581887176445" />
+    <state x="439" y="25" key="CommitChangelistDialog2" timestamp="1581921083938">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="439" y="25" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581921083938" />
     <state x="580" y="177" key="FileChooserDialogImpl" timestamp="1581847936703">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="177" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1581847936703" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1581920971557">
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1581960644602">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1581920971557" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1581920971557">
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1581960644602" />
+    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1581960644602">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1581920971557" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1581920971557">
+    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1581960644602" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1581960644602">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1581920971557" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1581920971557">
+    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1581960644602" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1581960644602">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1581920971557" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1581960644602" />
     <state x="301" y="73" key="SettingsEditor" timestamp="1581847635761">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1581847635761" />
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1581919149007">
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1581921092785">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1581919149007" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1581921092785" />
     <state x="501" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1581883996911">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

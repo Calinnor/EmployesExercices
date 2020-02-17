@@ -22,10 +22,11 @@ public class Testeur extends Employe{
         return testeurYearIncome;
     }
 
-    public double yearIncomeCalculWithPrime(){
+   /* public double yearIncomeCalculWithPrime(){
         double testeurYearIncomeWithPrime = super.yearIncomeCalculWithPrime()/100 + FACTEUR_GAINS_ERREURS * this.correctedWarnings+this.askForPrime;
+        //System.out.format("%.2f", testeurYearIncomeWithPrime);
         return testeurYearIncomeWithPrime;
-    }
+    }*/
 
 
     public String toString(){

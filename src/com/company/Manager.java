@@ -17,13 +17,15 @@ public class Manager extends Employe{
     public double yearIncomeCalcul() {
         double managerYearIncome = super.yearIncomeCalcul() / 100 + FACTEUR_GAIN_CLIENT * this.numberOfNewCustomersBringing +
                 FACTEUR_GAIN_VOYAGE * this.travelDays;
+        //System.out.format("%.2f", managerYearIncome);
         return managerYearIncome;
     }
 
-    public double yearIncomeCalculWithPrime(){
+    /*public double yearIncomeCalculWithPrime(){
         double managerYearIncomeWithPrime = super.yearIncomeCalculWithPrime()/100 + FACTEUR_GAIN_CLIENT * this.numberOfNewCustomersBringing+this.askForPrime;
+        //System.out.format("%.2f", managerYearIncomeWithPrime);
         return managerYearIncomeWithPrime;
-    }
+    }*/
 
     public String toString() {
         String managerInformations = this.nom+"\n"+super.toString() +"\nA voyagé " + this.travelDays + " jours et a apporté " + this.numberOfNewCustomersBringing + " nouveaux clients.\n";

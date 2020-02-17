@@ -20,7 +20,7 @@ public class Employe {
             mensualOccupationTime = 10;
         }
         this.mensualOccupationTime = mensualOccupationTime;
-        System.out.println("Nous avons un nouvel employé: "+this.nom+ ". C'est un "+ this.getClass());
+        System.out.println("Nous avons un nouvel employé: "+this.nom+ ". C'est un "+ this.getClass().getSimpleName());
     }
 
 
@@ -32,6 +32,7 @@ public class Employe {
         //est censé formater yearIncome a deux chiffres apres la virgule...ne marche pas
         return yearIncome;
     }
+
     protected double yearIncomeCalculWithPrime() {
         double yearIncome = this.mensualIncome * 12 * this.mensualOccupationTime + this.askForPrime;
         return yearIncome;
@@ -57,8 +58,8 @@ public class Employe {
                 this.askForPrime = 0;
             }
         }
-        yearIncomeCalculWithPrime();
-        System.out.println(yearIncomeCalculWithPrime()+"test prime+salaire devrai etre 39941.6 avec prime 200");
+        double yearIncomeWithPrime = yearIncomeCalcul()+this.askForPrime;
+        System.out.println(yearIncomeWithPrime+"test salaire plus prime");
     }
 
 

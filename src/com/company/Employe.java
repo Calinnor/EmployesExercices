@@ -51,7 +51,6 @@ public class Employe {
                 this.askForPrime = 0;
             }
         }
-        System.out.println("askForPrime ="+askForPrime);
     }
 
     // ou que la donnée saisie est non numérique (lancement d’une InputMismatchException par nextDouble()).

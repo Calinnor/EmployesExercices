@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Employe {
@@ -10,6 +11,7 @@ public class Employe {
     protected double mensualIncome;
     protected double mensualOccupationTime=100;
     protected double askForPrime=0;
+    boolean primeJuste=false;
 
     //creation du constructeur Employes
     public Employe(String nom, double mensualIncome, double mensualOccupationTime) {
@@ -38,23 +40,51 @@ public class Employe {
     //methode demandant une primee
     protected void demandePrime() {
         nbreInstancesPrime++;
-        System.out.println("Montant de la prime demandée par " + this.nom + " ?");
         Scanner keyboard = new Scanner(System.in);
-        this.askForPrime = keyboard.nextDouble();
-        keyboard.nextLine();
-        int i = 1;
-        while (this.askForPrime>(yearIncomeCalcul()*2/100) && i < 5){
-            System.out.println("Trop cher");
-            i++;
-            System.out.println("Montant de la prime demandée par " + this.nom +" ?");
-            this.askForPrime = keyboard.nextDouble();
-            keyboard.nextLine();
-
-            if(i==5 && this.askForPrime >(yearIncomeCalcul()*2/100)) {
-                this.askForPrime = 0;
+        int i=0;
+        while (!primeJuste) {
+            try {
+                System.out.println("Montant de la prime demandée par " + this.nom + " ?");
+                i++;
+                this.askForPrime = keyboard.nextDouble();
+                keyboard.nextLine();
+                if(this.askForPrime>(yearIncomeCalcul()*2/100) && i<5){
+                    System.out.println("Montant de la prime XXX demandée par " + this.nom + " ?");
+                    askForPrime = keyboard.nextDouble();
+                    keyboard.nextLine();
+                    i++;
+                    System.out.println(i+ "i de prime true");
+                    if(this.askForPrime< (yearIncomeCalcul()*2/100)){
+                        primeJuste=true;
+                    }
+                    System.out.println(i+ "i de prime false");
+                    if(this.askForPrime>(yearIncomeCalcul()*2/100)) {
+                        primeJuste = false;
+                    }
+                    System.out.println(i + "i de i<5");
+                    if(i>=5){
+                        primeJuste=true;
+                    }
+                }
+                else
+                {
+                    primeJuste=true;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Vous devez introduire un nombre !");
+                keyboard.nextLine();
+                if(i>=5){
+                    primeJuste=true;
+                }
             }
+
         }
+        if(i>=5){this.askForPrime=0;}
+        System.out.println("ptime sortie de boucle" + askForPrime + " i= " + i);
     }
+
+
+
 
     // ou que la donnée saisie est non numérique (lancement d’une InputMismatchException par nextDouble()).
 

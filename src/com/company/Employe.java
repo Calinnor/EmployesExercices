@@ -31,10 +31,8 @@ public class Employe {
     //fonction de calcul du revenu annuel pour les employés
     protected double yearIncomeCalcul() {
         double yearIncome = this.mensualIncome * 12 * this.mensualOccupationTime ;
-        //String.format("%.2f", yearIncome);
-        //est censé formater yearIncome a deux chiffres apres la virgule...ne marche pas
+       // String newYearIncome = String.format("%.2f",yearIncome);
         return yearIncome;
-
     }
 
     //methode demandant une primee
@@ -87,12 +85,12 @@ public class Employe {
     public String toString() {
         if(nbreInstancesPrime!=0) {
             String employeInformations = "Taux d'occupation : " + this.mensualOccupationTime +
-                    "%. Salaire annuel : " + this.yearIncomeCalcul() + " francs. Prime :" + this.askForPrime;
+                    "%. Salaire annuel : " + String.format("%.2f",this.yearIncomeCalcul()) + " francs. Prime :" + this.askForPrime;
             return employeInformations;
         }
         else{
             String employeInformations = "Taux d'occupation : " + this.mensualOccupationTime +
-                    "%. Salaire annuel : " + this.yearIncomeCalcul() + " francs.";
+                    "%. Salaire annuel : " + String.format("%.2f",this.yearIncomeCalcul()) + " francs.";
             return employeInformations;
         }
     }

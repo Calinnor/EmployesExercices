@@ -42,6 +42,7 @@ public class Employe {
         nbreInstancesPrime++;
         Scanner keyboard = new Scanner(System.in);
         int i=0;
+        //introduction d'une condition boolean afin de maitriser le retour en boucle
         while (!primeJuste) {
             try {
                 System.out.println("Montant de la prime demandée par " + this.nom + " ?");
@@ -77,26 +78,11 @@ public class Employe {
                     primeJuste=true;
                 }
             }
-
         }
-        if(i>=5){this.askForPrime=0;}
-        System.out.println("ptime sortie de boucle" + askForPrime + " i= " + i);
+        if(i>=5){
+            this.askForPrime=0;
+        }
     }
-
-
-
-
-    // ou que la donnée saisie est non numérique (lancement d’une InputMismatchException par nextDouble()).
-
-
-    //Les dialogues relatifs à l’interaction devront être strictement analogues
-    // à ceux donnés dans les exemples de déroulement fournis plus bas.
-    // L’utilisateur n’aura droit qu’à 5 tentatives de saisie. Si après 5 tentatives
-    // le montant de la prime n’a pu être saisi (parce qu’il a été à chaque fois ou
-    // trop élevé ou différent d’une valeur numérique), la prime de l’employé reste à zero.
-    // Sinon la prime de l’employé vaudra le montant saisi.
-    //Indication : si une lecture échoue, pour faire en sorte que la prochaine lecture se passe bien il faudra «purger» le Scanner des données erronées en lui appliquant la méthode nextLine(). Vous devrez déclarer le Scanner comme variable locale de la méthode void demandePrime().
-
 
     public String toString() {
         if(nbreInstancesPrime!=0) {

@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Employe {
     public static int nbreInstancesPrime = 0;
+    public static int primeNonRecevable=1;
 
 
     protected String nom;
@@ -48,19 +49,16 @@ public class Employe {
                 this.askForPrime = keyboard.nextDouble();
                 keyboard.nextLine();
                 if(this.askForPrime>(yearIncomeCalcul()*2/100) && i<5){
-                    System.out.println("Montant de la prime XXX demandée par " + this.nom + " ?");
+                    System.out.println("Montant de la prime demandée par " + this.nom + " ?");
                     askForPrime = keyboard.nextDouble();
                     keyboard.nextLine();
                     i++;
-                    System.out.println(i+ "i de prime true");
                     if(this.askForPrime< (yearIncomeCalcul()*2/100)){
                         primeJuste=true;
                     }
-                    System.out.println(i+ "i de prime false");
                     if(this.askForPrime>(yearIncomeCalcul()*2/100)) {
                         primeJuste = false;
                     }
-                    System.out.println(i + "i de i<5");
                     if(i>=5){
                         primeJuste=true;
                     }
@@ -78,12 +76,13 @@ public class Employe {
             }
         }
         if(i>=5){
+            primeNonRecevable=0;
             this.askForPrime=0;
         }
     }
 
     public String toString() {
-        if(nbreInstancesPrime!=0) {
+        if(nbreInstancesPrime!=0 && primeNonRecevable !=0) {
             String employeInformations = "Taux d'occupation : " + this.mensualOccupationTime +
                     "%. Salaire annuel : " + String.format("%.2f",this.yearIncomeCalcul()) + " francs. Prime :" + this.askForPrime;
             return employeInformations;
